@@ -1,0 +1,259 @@
+@import "compass/css3"
+
+$blue: #3198D3
+$white: #f5f5f5
+$link_blue: #0CC6E8
+$black: #022329
+$green: #31d37d
+* 
+  -webkit-transition: all 0.3s
+  -moz-transition: all 0.3s
+  transition: all 0.3s
+  -webkit-appearance: none
+
+#awesome_video
+  position: absolute
+  z-index: -9999
+  top: 0
+  left: 0
+  min-width: 100%
+  height: 100%
+
+.video_container
+  position: absolute
+  z-index: -9999
+  top: 0
+  left: 0
+  overflow: hidden
+
+body
+  background: $black
+  font-family: "Open Sans", Helvetica, Arial, sans-serif
+  font-size: 16px
+  color: #fff
+  margin: 0
+a
+  color: $link_blue
+
+.row
+  margin: 0 auto
+
+.white-bg
+  background: $white
+
+.header
+  width: 100%
+  .logo
+    width: 184px
+    height: 44px
+    margin: 0
+    margin-left: 50px
+    margin-top: 50px
+    background-size: 184px 44px
+    overflow: hidden
+    z-index: 100
+    background: url("../images/logo_new.png") no-repeat
+    text-indent: -9999px
+
+.mission-statement
+  text-align: center
+  color: $white
+  width: 80%
+  padding-left: 10%
+  padding-right: 10%
+h1
+  font-size: 4.5em
+  text-transform: uppercase
+  font-weight: 800
+  margin-top: 1em
+  margin-bottom: .1em 
+
+h2
+  font-size: 1.5em
+  font-weight: 400
+  margin: 0
+h3
+  font-size: 1.5em
+  font-weight: 400
+  margin: 0
+.call-out
+  font-size: 3em
+  text-transform: uppercase
+  font-weight: 800
+  font-style: italic
+
+.sign-up-form
+  margin: 0 auto
+  width: 350px
+  margin-top: 5em
+  .label
+    margin-bottom: 5px
+.emailfield
+  width: 80%
+  padding: 5% 10% 5% 10%
+  border: 1px solid $white
+  margin: 0
+  -moz-box-sizing: content-box
+  -webkit-box-sizing: content-box
+  box-sizing: content-box
+  font-size: 1em
+  background: none
+  color: $black
+
+.emailfield:focus
+  background-color: $white
+  border-color: $blue 
+
+.button
+  color: $white
+  width: 80%
+  padding: 5% 10% 5% 10%
+  display: block
+  text-decoration: none
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: .15em
+  font-size: 1em
+  font-weight: 600
+
+.button-main
+  color: $white
+  width: 100%
+  padding: 5% 10% 5% 10%
+  display: block
+  text-decoration: none
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: .15em
+  font-size: 1em
+  font-weight: 600
+  background-color: $blue
+  margin-top: 1em
+  border: none
+  cursor: pointer
+  @include box-shadow (inset 0 1px 1px rgba(255,255,255,0.6))
+  @include text-shadow (0 -1px 0 darken($blue, 5%))
+  @include border-radius (4px)
+
+.button-main:hover
+  background-color: darken($blue, 5%)
+  @include text-shadow (0 -1px 0 darken($blue, 15%))
+.button-main:active
+  background-color: darken($blue, 15%)
+.button-secondary
+  margin-top: 1em
+.button-secondary:hover
+  margin-top: 1em
+  color: $blue
+.container
+  width: 100%
+  margin: 0 auto
+.row
+  padding-bottom: 100px
+  padding-top: 100px
+
+.video_header
+  margin-bottom: 0px
+
+.features
+  color: $black
+  text-align: center
+
+.how
+  padding-top: 30px
+  background: $blue
+  color: $white
+
+.area
+  margin-bottom: 100px
+
+.how_img
+  margin-top: 80px
+.how_video
+  margin-top: 80px
+  width: 50%
+.copy
+  background: $green
+  color: $white
+  h1
+    margin-top: 0
+.video-note
+  line-height: 50px
+  vertical-align: middle
+  img
+    height: 50px
+    vertical-align: middle
+    @include border-radius(100%)
+    margin-left: 1em
+  a
+    text-decoration: none
+    border-bottom: 1px solid $link_blue
+  a:hover
+    border-bottom: 1px solid darken($link_blue, 10%)
+    color: darken($link_blue, 10%)
+    padding-bottom: 3px
+
+footer
+  text-align: center
+  background: $black
+  background-image: url("../images/footer_bg.jpg") 
+  background-repeat: none
+  background-size: 120% auto
+  background-position: 50% 50%
+  color: $white
+  img:hover
+    border: 4px solid $blue
+  img
+    border: 4px solid rgba(255,255,255,0)
+    width: 100px
+    @include border-radius(100%)
+    margin-left: 1em
+
+$break-handheld: 1024px
+
+@media screen and (max-device-width: $break-handheld)
+  body
+    font-size: 12px
+  h1
+    font-size: 2.5em
+  h2
+    font-size: 1.5em
+  h3
+    font-size: 1.5em
+  .video_header
+    padding-left: 5%
+    padding-right: 5%
+  .header
+    .logo
+      margin-top: 10px
+      width: 92px
+      height: 22px
+      margin-left: 20px
+      margin-top: 20px
+      background-size: 92px 22px
+  .mission-statement
+    h1
+      margin-top: .5em
+  #awesome_video
+    display: none
+  .row
+    padding-left: 5%
+    padding-right: 5%
+    padding-bottom: 20px
+    padding-top: 20px
+  .sign-up-form
+    width: 90%
+    margin-top: 0em
+  .area
+    margin-bottom: 10px
+  .how_video
+    display: none
+  iframe
+    width: 90%
+    height: 100%
+  footer
+    background-image: none  
+
+
+
+
